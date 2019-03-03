@@ -14,13 +14,24 @@ export default class Sidebar extends React.Component {
 
   handleClick(index, ev) {
     ev.preventDefault();
-    this.props.onSelect(index)    
+    this.props.onSelect(index)
   }
   render() {
     const { files, selectedFileIndex, onAdd } = this.props;
 
     return (
       <ul className="sidebar">
+        {
+          files.map((file, i) => (
+            <SidebarItem
+              isSelected={selectedFileIndex === i}
+              key={i}
+              file={file}
+              onClick={this.handleClick.bind(null, i)}
+            />
+          ))
+        }
+
       </ul>
     );
   }
