@@ -33,6 +33,7 @@ export default class App extends React.Component {
   handleChange(ev) {
     const { selectedFileIndex } = this.state;
     // TODO Dispatch action
+    actions.updateFile(selectedFileIndex, ev.target.value)
   }
   handleSelect(selectedFileIndex) {
     // TODO Update selectedFileIndex state
