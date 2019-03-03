@@ -37,6 +37,7 @@ export default class App extends React.Component {
   }
   handleSelect(selectedFileIndex) {
     // TODO Update selectedFileIndex state
+    this.setState({ selectedFileIndex });
   }
   handleAdd(ev) {
     ev.preventDefault();
