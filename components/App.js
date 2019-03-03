@@ -28,7 +28,7 @@ export default class App extends React.Component {
 
   }
   componentWillUnmount() {
-    // TODO
+     this.removeListener();
   }
   handleChange(ev) {
     const { selectedFileIndex } = this.state;
