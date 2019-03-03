@@ -22,7 +22,10 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    // TODO
+    this.removeListener = fileStore.addListener((files) => {
+      this.setState({ files });
+    });
+
   }
   componentWillUnmount() {
     // TODO
