@@ -47,6 +47,9 @@ export default class App extends React.Component {
   handleRemove(ev) {
     ev.preventDefault()
     // TODO Dispatch action
+    const { selectedFileIndex } = this.state;
+    actions.removeFile(selectedFileIndex);
+    this.setState({ selectedFileIndex: 0 });
   }
   render() {
     const { files, selectedFileIndex } = this.state;
