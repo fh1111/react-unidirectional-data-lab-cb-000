@@ -42,6 +42,7 @@ export default class App extends React.Component {
   handleAdd(ev) {
     ev.preventDefault();
     // TODO Dispatch action
+    actions.addFile();
   }
   handleRemove(ev) {
     ev.preventDefault()
